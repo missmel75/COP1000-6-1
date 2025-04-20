@@ -17,11 +17,12 @@ print(" ")
 print("1. PRINT all Authorized Vehicles")
 print("2. Exit")
 print(" ")
-userChoice = input("Enter your choice: ")
 
 #user input
 running = True
 while running:
+    userChoice = input("Enter your choice: ")
+
     if userChoice == "1":
         print("The AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
         print(" ")
@@ -40,4 +41,4 @@ while running:
     elif userChoice == "2":
         print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
         print(" ")
-        running = False
+        running = False  

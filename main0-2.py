@@ -10,12 +10,13 @@ allowed_vehicles = [
 
 #display menu
 print("********************************")
-print("AutoCountry Vehicle Finder v0.1")
+print("AutoCountry Vehicle Finder v0.2")  
 print("********************************")
 print("Please Enter the following number below from the following menu:")
 print(" ")
 print("1. PRINT all Authorized Vehicles")
-print("2. Exit")
+print("2. SEARCH for Authorized Vehicle") 
+print("3. Exit") 
 print(" ")
 
 #user input
@@ -30,15 +31,33 @@ while running:
             print(vehicle)
         print(" ")
         print("********************************")
-        print("AutoCountry Vehicle Finder v0.1")
+        print("AutoCountry Vehicle Finder v0.2")  
         print("********************************")
         print("Please Enter the following number below from the following menu:")
         print(" ")
         print("1. PRINT all Authorized Vehicles")
-        print("2. Exit")
+        print("2. SEARCH for Authorized Vehicle") 
+        print("3. Exit")  
         print(" ")
 
-    elif userChoice == "2":
+    elif userChoice == "2":  
+        vehicle_name = input("Please Enter the full Vehicle name: ")
+        if vehicle_name in allowed_vehicles:
+            print(f"{vehicle_name} is an authorized vehicle")
+        else:
+            print(f"{vehicle_name} is not an authorized vehicle, if you received this in error please check the spelling and try again")
+        print(" ")
+        print("********************************")
+        print("AutoCountry Vehicle Finder v0.2")
+        print("********************************")
+        print("Please Enter the following number below from the following menu:")
+        print(" ")
+        print("1. PRINT all Authorized Vehicles")
+        print("2. SEARCH for Authorized Vehicle")
+        print("3. Exit")
+        print(" ")
+
+    elif userChoice == "3":  
         print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
         print(" ")
-        running = False  
+        running = False
